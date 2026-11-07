@@ -1,0 +1,268 @@
+/* Estilos globais */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+    background-image: url("../img/fundo.png");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.titulo-neon {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center center;
+    font-size: 30px;
+    font-family: 'vintage', feeling;
+    text-align: center;
+    color: #f9f9f9;
+
+    text-shadow:
+        0 0 5px #ff4d4d,
+        0 0 10px #ff4d4d,
+        0 0 20px #ff4d4d,
+        0 0 40px #ff9999,
+        0 0 80px #ff9999;
+    animation: pulseNeon 1.5s infinite, colorShift 3s infinite alternate;
+
+}
+
+
+h2.titulo-neon {
+    top: 100px;
+    font-size: 48px;
+}
+
+@keyframes pulseNeon {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+        text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 40px #ff9999, 0 0 80px #ff9999;
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.1);
+        text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d, 0 0 50px #ff9999, 0 0 100px #ff9999;
+    }
+}
+
+/* Painel Central */
+.painel {
+    background-color: rgba(118, 32, 32, 0.406);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-sizing: border-box;
+    /* Garante que o padding não aumente os 400px */
+}
+
+
+
+/*campos brilham levemente quando o usuário clicar para digitar*/
+input:focus,
+select:focus {
+    border-color: #ff4d4d;
+    /* Um vermelho mais claro */
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.5);
+    /* Efeito de brilho neon suave */
+    outline: none;
+}
+
+
+/* Botões */
+button {
+    background-color: #7c1818;
+    color: #fff;
+    padding: 15px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    font-size: 16px;
+    display: block;
+    transition: 0.3s;
+}
+
+button,
+a {
+    text-decoration: none;
+    /* Remove qualquer linha de sublinhado */
+}
+
+.painel button:hover {
+    background-color: #000000;
+    color: #7c1818;
+    /* Removido o width: fit-content  para ele não encolher ao clicar */
+}
+
+
+/* Estilos para as páginas de cadastro  de clientes */
+/* Campos de Input e Select */
+h1.cadastrar {
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 0 auto 20px auto;
+    border-radius: 6px;
+    font-size: 21px;
+    text-align: center;
+    border: 1px solid #7c1818;
+    background-color: #7c1818;
+    width: 200px;
+    transition: 0.3s;
+    /* Suaviza a mudança no hover */
+}
+
+input,
+select {
+    width: 100%;
+    /* Ocupa a largura total permitida */
+    max-width: 300px;
+    /* Limita para não ficar largo demais */
+    padding: 10px;
+    margin: 8px auto;
+    /* Margem auto centraliza elementos block */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #580000;
+    display: block;
+    /* Garante que respeite o margin auto */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+label {
+    color: #ffffff;
+    /* Branco puro */
+    font-size: 14px;
+    /* Tamanho da letra */
+    font-weight: bold;
+    /* Deixa a palavra em negrito */
+    margin-bottom: 5px;
+    /* Dá um espacinho entre o nome e o campo */
+    display: block;
+    /* Garante que o nome fique EM CIMA do campo */
+    text-align: left;
+    /* Alinha o texto à esquerda (opcional) */
+}
+
+
+
+/* O segredo para os dois campos LADO A LADO vencimento e status */
+.form-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Ajuste específico para os dois dentro do grupo vencimento e status */
+.form-group select,
+.form-group input[type="date"] {
+    width: 140px;
+    /* Tamanho fixo para caberem lado a lado nos 400px */
+    margin: 0;
+    /* Remove a margem lateral para o gap funcionar */
+}
+
+
+#button-salvar {
+    background-color: #7c1818;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+    min-width: 100px;
+}
+
+
+
+.copyright {
+    position: absolute;
+    /* Faz ele ignorar a posição do painel */
+    bottom: 10px;
+    /* Fixa a 10px do final da tela */
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    width: 100%;
+}
+
+
+/*Icone home pagina cadastro*/
+
+
+.home {
+    color: #ffffff;
+    font-family: monospace;
+}
+
+.logo-home span {
+    transform: translateY(4px);
+    /* ⬇️ BAIXO 3px */
+    /* transform: translateY(-3px);  ⬆️ CIMA 3px */
+
+}
+
+.logo-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.logo-home a {
+    display: flex;
+    align-items: center;
+    /* 🎯 ALINHA a BASE (parte de baixo) */
+    justify-content: center;
+    gap: 0px;
+    width: 55px;
+    height: 40px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(125, 124, 124, 0.1);
+    transition: all 0.3s ease;
+
+}
+
+.logo-home svg {
+    display: block;
+    flex-shrink: 0;
+    margin-bottom: 1px;
+    /* 🎯 Ajuste fino da base */
+}
+
+
+.logo-home a:hover {
+    transform: scale(1.1);
+    background: #7c1818;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

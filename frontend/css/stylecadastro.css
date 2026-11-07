@@ -1,0 +1,90 @@
+/* Estilos para as páginas de cadastro  de clientes */
+/* Campos de Input e Select */
+.painel {
+    background-color: rgba(118, 32, 32, 0.406);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-sizing: border-box;
+    /* Garante que o padding não aumente os 400px */
+}
+#h1-cadastro {
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 0 auto 20px auto;
+    border-radius: 6px;
+    font-size: 21px;
+    text-align: center;
+    border: 1px solid #7c1818;
+    background-color: #7c1818;
+    width: 200px;
+    transition: 0.3s;
+    /* Suaviza a mudança no hover */
+}
+
+input,
+select {
+    width: 100%;
+    /* Ocupa a largura total permitida */
+    max-width: 300px;
+    /* Limita para não ficar largo demais */
+    padding: 10px;
+    margin: 8px auto;
+    /* Margem auto centraliza elementos block */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #580000;
+    display: block;
+    /* Garante que respeite o margin auto */
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+label {
+    color: #ffffff;
+    /* Branco puro */
+    font-size: 14px;
+    /* Tamanho da letra */
+    font-weight: bold;
+    /* Deixa a palavra em negrito */
+    margin-bottom: 5px;
+    /* Dá um espacinho entre o nome e o campo */
+    display: block;
+    /* Garante que o nome fique EM CIMA do campo */
+    text-align: left;
+    /* Alinha o texto à esquerda (opcional) */
+}
+
+
+
+/* O segredo para os dois campos LADO A LADO vencimento e status */
+.form-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Ajuste específico para os dois dentro do grupo vencimento e status */
+.form-group select,
+.form-group input[type="date"] {
+    width: 140px;
+    /* Tamanho fixo para caberem lado a lado nos 400px */
+    margin: 0;
+    /* Remove a margem lateral para o gap funcionar */
+}
+
+
+#button-salvar {
+    background-color: #7c1818;
+    padding: 10px;
+    margin: 5px auto;
+    border-radius: 10px;
+    text-align: center;
+    width: fit-content;
+    min-width: 100px;
+}
